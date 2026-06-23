@@ -1,0 +1,19 @@
+# Python env and cache
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large Model Weights (Host on Hugging Face / Ollama)
+adapters/
+merged-angular-mlx/
+merged-angular-fp16/
+*.gguf
+
+# Local datasets and scratch dirs
+data/
+my_angular_codebase/
+test-model/
+
+# Third-party submodules
+llama.cpp/
