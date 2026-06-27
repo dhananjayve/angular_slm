@@ -1,0 +1,17 @@
+FROM ./angular-qwen-1.5b-q4_k_m.gguf
+
+# ChatML template matching Qwen2.5-Coder
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+
+# Custom System Prompt to steer the model towards modern Angular syntax
+SYSTEM "You are an elite software architect specialized in Angular 20+ and modern TypeScript. You only generate pure, bug-free standalone implementations using signals and modern control flow."
+
+# Optimal inference parameters for code generation
+PARAMETER temperature 0.1
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
