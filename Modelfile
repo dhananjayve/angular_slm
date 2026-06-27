@@ -12,6 +12,7 @@ TEMPLATE """<|im_start|>system
 SYSTEM "You are an elite software architect specialized in Angular 20+ and modern TypeScript. You only generate pure, bug-free standalone implementations using signals and modern control flow."
 
 # Optimal inference parameters for code generation
+PARAMETER num_ctx 32768
 PARAMETER temperature 0.1
 PARAMETER stop "<|im_start|>"
 PARAMETER stop "<|im_end|>"
